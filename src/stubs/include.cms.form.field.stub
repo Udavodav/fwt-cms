@@ -1,0 +1,5 @@
+<div class="mb-3">
+    <label for="$column$Input" class="form-label">$columnName$</label>
+    <input type="$inputType$" class="form-control" id="$column$Input" name="$column$"
+    value="{{old('$column$', $$modelVariable$?->$column$ ?? '')}}">
+</div>

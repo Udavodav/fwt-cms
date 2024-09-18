@@ -1,0 +1,17 @@
+@extends('layouts.cms')
+
+@section('title')
+    Show info of $modelVariable$
+@endsection
+
+@section('content')
+
+    <div>
+
+$properties$
+    </div>
+    <div>
+        <a href="{{route('$models$.edit', $$modelVariable$)}}" class="btn btn-primary">Edit $modelVariable$</a>
+    </div>
+
+@endsection

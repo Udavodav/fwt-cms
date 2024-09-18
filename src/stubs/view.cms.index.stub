@@ -1,0 +1,34 @@
+@extends('layouts.cms')
+
+@section('title')
+    List $models$
+@endsection
+
+@section('content')
+
+    <div>
+        <a href="{{ route('$models$.create') }}" class="btn btn-primary">Create new</a>
+    </div>
+
+    <div class="table-responsive my-2">
+        <table class="table table-striped table-sm">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    $tHead$
+                </tr>
+            </thead>
+            <tbody>
+            @foreach($$models$ as $$modelVariable$)
+                <tr>
+                    <td>{{$loop->iteration}}</td>
+                    $tBody$
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
+    </div>
+
+    {{ $$models$->links() }}
+
+@endsection

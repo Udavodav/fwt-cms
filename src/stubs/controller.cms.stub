@@ -1,0 +1,71 @@
+<?php
+
+namespace $namespace$;
+
+use $namespaceModel$;
+use $namespaceRequest$;
+
+class $class$ extends Controller
+{
+    /**
+     * Display a list models of $model$.
+     */
+    public function index()
+    {
+        return view('$models$.index', ['$models$' => $model$::paginate(20)]);
+    }
+
+    /**
+     * Show the form for creating a new $model$.
+     */
+    public function create()
+    {
+        return view('$models$.create');
+    }
+
+    /**
+     * Store a newly created $model$ in storage.
+     */
+    public function store($model$Request $request)
+    {
+        $$modelVariable$ = $model$::create($request->validated());
+
+        return redirect()->route('$models$.show', $$modelVariable$);
+    }
+
+    /**
+     * Display the specified $model$.
+     */
+    public function show($model$ $$modelVariable$)
+    {
+        return view('$models$.show', ['$modelVariable$' => $$modelVariable$]);
+    }
+
+    /**
+     * Show the form for editing the specified $model$.
+     */
+    public function edit($model$ $$modelVariable$)
+    {
+        return view('$models$.edit', ['$modelVariable$' => $$modelVariable$]);
+    }
+
+    /**
+     * Update the specified $model$ in storage.
+     */
+    public function update($model$Request $request, $model$ $$modelVariable$)
+    {
+        $$modelVariable$->update($request->validated());
+
+        return redirect()->route('$models$.show', $$modelVariable$);
+    }
+
+    /**
+     * Remove the specified $model$ from storage.
+     */
+    public function destroy($model$ $$modelVariable$)
+    {
+        $$modelVariable$->delete();
+
+        return redirect()->route('$models$.index');
+    }
+}

@@ -1,0 +1,15 @@
+@extends('layouts.cms')
+
+@section('title')
+    Form for create new $modelVariable$
+@endsection
+
+@section('content')
+
+    <form class="col-lg-6" action="{{route('$models$.store')}}" method="POST">
+        @csrf
+        @include('$models$.form')
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+
+@endsection

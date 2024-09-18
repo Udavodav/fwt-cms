@@ -1,0 +1,21 @@
+{
+    "extra":{
+        "providers": [
+            "Fwt\\Crud\\Providers\\CmsProvider"
+        ]
+    },
+    "name": "fwt/crud",
+    "description": "Package for generate CRUD of model attributes",
+    "autoload": {
+        "psr-4": {
+            "Fwt\\Crud\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vitaly",
+            "email": "vkotkin2002@mail.ru"
+        }
+    ],
+    "require": {}
+}
